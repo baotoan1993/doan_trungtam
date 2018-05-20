@@ -37,7 +37,13 @@
     </div>
   </div>
   </nav>
-</div>
+	</div>
+    <div class="w3l_banner_nav_right">
+    {if isset($view2)}
+	{include file=$view2}
+	{/if}
+    </div>
+    <!--<div class="clearfix"></div>-->
 
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2 -->
 
