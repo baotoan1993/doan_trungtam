@@ -1,4 +1,3 @@
-<script src="public/js/user_cart.js"></script>
 	<div class="agileits_header">
 		<div class="w3l_offers">
 			<a href=".">Trang chủ</a>
