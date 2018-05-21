@@ -4,9 +4,17 @@ class C_product
 {
 	public function Hien_thi_san_pham()
 	{
-		//model
 		include("models/m_product.php");
 		$m_product = new M_product();
+		if(isset($_POST['btnXoa']))
+		{
+			$ProductID = $_POST['ProductID'];
+			$kq = $m_product->Xoa_san_pham_theo_ma_san_pham($ProductID);
+			echo $kq;
+			return;
+		}
+		//model
+		
 		$danh_sach_san_pham = $m_product->Lay_danh_sach_san_pham();
 		
 		$limit = 10;
@@ -97,6 +105,40 @@ class C_product
 		$view = "views/product/v_add_product.tpl";
 		$smarty->assign("view", $view);
 		$smarty->display("layout.tpl");
+	}
+	
+	public function Cap_nhat_san_pham()
+	{
+		$ProductID = $_POST['txtProductID'];
+		$ProductName = $_POST['txtProductName'];
+		$Price = str_replace(",","",$_POST['txtPrice']);
+		$CategoryID = $_POST['slCategoryIDSub'];
+		$SupplierID = $_POST['slSupplier'];
+		$ProductType = $_POST['txtProductType'];
+		$SubUnit = $_POST['txtSubUnit'];
+		$Discount = $_POST['txtDiscount'];
+		$Description = $_POST['txtDescription'];
+		$file = $_FILES['Image'];
+		
+		
+		
+		
+		
+		include("models/m_product.php");
+		$m_product = new M_product();
+		$kq = $m_product->Cap_nhat_san_pham($CategoryID, $SupplierID, $ProductName, $ProductType, $SubUnit, $Description, $file['name'], $Price, $Discount, $ProductID);
+		if($kq == 1)
+		{
+			if($file['error']== 0){
+				move_uploaded_file($file['tmp_name'], "../public/images/product/".$file['name']);
+				copy("../public/images/product/".$file['name'],"../public/images/product/full/".$file['name']);
+			}
+			header("location: product.php");
+		}
+		else
+		{
+			echo "cap nhat khong thanh cong";	
+		}
 	}
 }
 ?>

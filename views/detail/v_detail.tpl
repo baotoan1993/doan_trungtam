@@ -29,7 +29,7 @@
             </tr>
             <tr>
               <th style="color:black">Nhãn hiệu:</th>
-              <td style="color:red"><h4>{$san_pham->ProductType}</h4></td>
+              <td ><h4 style="color:#F60">{$san_pham->ProductType}</h4></td>
             </tr>
             <tr>
               <th style="color:black">Đơn vị tính:</th>
@@ -46,6 +46,10 @@
                   </h4>
                 </div>
               </td>
+            </tr>
+            <tr>
+              <th style="color:black">Mô tả:</th>
+              <td style="color:black; text-align:left;">{$san_pham->Description}</td>
             </tr>
             <tr>
             	<td colspan="2">

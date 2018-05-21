@@ -76,6 +76,9 @@ $(document).ready(function(){
     );
 });
 </script> 
+
+<script src="public/js/user_cart.js"></script>
+
 <!-- here stars scrolling icon --> 
 <script type="text/javascript">
 		$(document).ready(function() {

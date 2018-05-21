@@ -38,17 +38,7 @@ else if($kieu == 'giam_hang')
 }
 else if($kieu == 'xoa_hang')
 {
-	/*foreach($_SESSION['your_cart'] as $product)
-	{
-		if($product->ProductID == $ProductID)
-		{
-			unset($_SESSION['your_cart']->$product);
-			echo '1';
-			return;
-		}
-	}*/
-	
-	for($i = 0; $i < count($_SESSION['your_cart']); $i++)
+	/*for($i = 0; $i < count($_SESSION['your_cart']); $i++)
 	{
 		if($_SESSION['your_cart'][$i]->ProductID == $ProductID)
 		{
@@ -58,6 +48,26 @@ else if($kieu == 'xoa_hang')
 			}
 			echo '1';
 			return;
+		}
+	}*/
+	
+	foreach($_SESSION['your_cart'] as $elementKey => $product)
+	{
+		foreach($product as $key => $value)
+		{
+			if($key == 'ProductID' && $value == $ProductID)
+			{
+				unset($_SESSION['your_cart'][$elementKey]);
+				if(count($_SESSION['your_cart']) == 0){
+					unset($_SESSION['your_cart']);
+					echo '111';
+					return;
+				}
+				echo '1';
+				return;
+				
+			}
+			
 		}
 	}
 }

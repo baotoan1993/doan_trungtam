@@ -5,6 +5,7 @@ class M_cart extends Database
 	public function __construct()
 	{
 		parent::__construct();
+		date_default_timezone_set('Asia/Ho_Chi_Minh');
 	}
 	
 	public function Kiem_tra_san_pham_ton_tai($ma_user, $ma_san_pham)
@@ -136,7 +137,7 @@ class M_cart extends Database
 		$this->execute();
 	}
 	
-	public function Thanh_toan($UserID, $ListProduct=array())
+	/*public function Thanh_toan($UserID, $ListProduct=array())
 	{
 		try{
 			$UserID = (integer)$UserID;
@@ -160,6 +161,44 @@ class M_cart extends Database
 			return true;
 		}catch(PDOException $ex){
 			return false;
+		}
+		
+	}*/
+	
+	public function Thanh_toan($CustomerName, $Email, $Address, $Phone, $Note, $cart = array())
+	{
+		try
+		{
+			$sql = "INSERT INTO customers(CustomerName,Email,Address,Phone,Note)
+				VALUES(?,?,?,?,?)";
+			$this->setQuery($sql);
+			$param = array($CustomerName, $Email, $Address, $Phone, $Note);
+			$this->execute($param);
+			
+			$CustomerID = $this->getLastId();
+			$sql = "INSERT INTO orders(CustomerID,DateCreated)
+					VALUES(?,?)";
+			
+			$now = date('Y-m-d H:i:s');
+			$this->setQuery($sql);
+			$param = array($CustomerID, $now);
+			$this->execute($param);
+			
+			$OrderID = $this->getLastId();
+			foreach($cart as $product)
+			{
+				$ProductID = $product->ProductID;
+				$Quantity = $product->Quantity;
+				$sql = "INSERT INTO orderdetail(OrderID,ProductID,Quantity)
+						VALUES(?,?,?)";
+				$this->setQuery($sql);
+				$param = array($OrderID,$ProductID,$Quantity);
+				$this->execute($param);
+			}
+			return '1';
+		}catch(PDOException $ex)
+		{
+			return '0';
 		}
 		
 	}

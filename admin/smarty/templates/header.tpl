@@ -15,7 +15,7 @@
         <ul class="nav top-menu">
           <li>
             <form class="navbar-form">
-              <input class="form-control" placeholder="Search" type="text">
+              <input class="form-control" placeholder="Search" type="text" onkeyup="Tim_san_pham(this)">
             </form>
           </li>
         </ul>
@@ -261,3 +261,21 @@
         <!-- notificatoin dropdown end-->
       </div>
     </header>
+    
+    <script>
+		function Tim_san_pham(a){
+			var ProductName = $(a).val();
+			console.log(ProductName)
+			$.ajax({
+				url: 'search_product.php',
+				type: 'POST',
+				data: {
+					ProductName : ProductName
+				},
+				success: function(res)
+				{
+					$("#main_content").html(res)
+				}
+			})
+		}
+	</script>

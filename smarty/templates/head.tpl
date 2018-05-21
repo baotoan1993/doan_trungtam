@@ -15,14 +15,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
+        
+   
+ 
 <!-- //for-mobile-apps -->
 <link href="public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="public/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- font-awesome icons -->
 <link href="public/css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
+
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <!-- //font-awesome icons -->
 <!-- js -->
 <script src="public/js/jquery-1.11.1.min.js"></script>
+
+
 
 <script src="public/js/notify.min.js"></script>
 
@@ -41,8 +48,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   </script>
 
 <!-- //js -->
-<link href='//fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <!-- start-smoth-scrolling -->
 
 <script type="text/javascript" src="public/js/move-top.js"></script>
@@ -55,7 +60,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	});
 </script>
+
 <!-- start-smoth-scrolling -->
 </head>
 	
-<body style="font-family:Arial, Helvetica, sans-serif">
+<body style="font-family: 'Roboto', serif">

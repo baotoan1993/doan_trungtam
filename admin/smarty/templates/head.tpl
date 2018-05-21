@@ -35,11 +35,22 @@
   <link href="public/css/xcharts.min.css" rel=" stylesheet">
   <link href="public/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
   
+  <link rel="stylesheet" type="text/css" href="public/css/animate.css">
+  
   <script src="public/js/jquery.js"></script>
   <script src="public/js/jquery-ui-1.10.4.min.js"></script>
   <script src="public/js/jquery-1.8.3.min.js"></script>
   
+  <script src="../public/js/notify.min.js"></script>
+  
+  <script type="text/javascript" src="public/js/notifynha.min.js"></script>
+  
   <script type="text/javascript" src="../public/ckeditor/ckeditor.js"></script>
+  
+  <!--<script src="public/js/Chart.js"></script>-->
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+ 
   <!-- =======================================================
     Theme Name: NiceAdmin
     Theme URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/

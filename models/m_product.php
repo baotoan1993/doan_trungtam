@@ -94,7 +94,10 @@ class M_product extends Database
 	
 	public function Lay_danh_sach_san_pham_theo_ten($ten, $vt=-1, $limit=-1)
 	{
-		$sql = "select * from products where ProductName like '%$ten%'";
+		$sql = "select * from products 
+				where ProductName like '%$ten%' 
+				or ProductName like '%$ten' 
+				or ProductName like '$ten%'";
 		if($vt > -1 && $limit > -1)
 		{
 			$sql.= " LIMIT $vt, $limit";

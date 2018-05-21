@@ -27,15 +27,19 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="public/general.html">Danh sách loại hàng</a></li>
-              <li><a class="" href="public/buttons.html">Thêm loại hàng</a></li>
+              <li><a class="" href="category.php">Danh sách loại hàng</a></li>
             </ul>
           </li>
-          <li>
-            <a class="" href="public/widgets.html">
-                          <i class="icon_genius"></i>
-                          <span>Widgets</span>
+          
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="fa fa-user"></i>
+                          <span>Đơn hàng</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
+            <ul class="sub">
+              <li><a class="" href="order.php">Danh sách đơn hàng</a></li>
+            </ul>
           </li>
         </ul>
         <!-- sidebar menu end-->

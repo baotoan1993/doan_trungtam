@@ -49,13 +49,13 @@ function Hien_thi_gio_hang(a){
 }
 
 function Xoa_hang_trong_gio(a){
-	var ProductID = $(a).attr('ProductID')
+	var p = $(a).attr('ProductID')
 	//tr.remove()
 	$.ajax({
 		url: 'edit_cart.php',
-		method: 'post',
+		type: 'post',
 		data: {
-			ProductID: ProductID,
+			ProductID: p,
 			kieu: 'xoa_hang'
 		}
 	}).done(function(res){
@@ -78,14 +78,10 @@ function Xoa_hang_trong_gio(a){
 			})
 		}else
 		{
-			$('.product_list_header').notify("Cập nhật giỏ hàng thất bại !!!",{
-				showAnimation: 'slideDown',
-				autoHide: true,
-				showDuration: 400,
-				hideAnimation: 'slideUp',
-				autoHideDelay: 2000,
-				className: 'error'
-			});
+			$('body').css({'pointer-events': 'none', 'opacity': '0.8'})
+			setTimeout(function(){
+				window.location = '.';
+			}, 1000)
 		}
 	})
 }
@@ -93,18 +89,6 @@ function Xoa_hang_trong_gio(a){
 function Giam_so_luong(a)
 {
 	var ProductID = $(a).attr('ProductID')
-/*	if(Quantity == 1){
-		$(a).notify("Không thể giảm số lượng !!!",{
-			showAnimation: 'slideDown',
-			autoHide: true,
-			showDuration: 400,
-			hideAnimation: 'slideUp',
-			autoHideDelay: 2000,
-			className: 'error',
-			position: 'top'
-		});
-		return
-	}*/
 		
 	$.ajax({
 		url: 'edit_cart.php',
