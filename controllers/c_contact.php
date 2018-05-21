@@ -39,7 +39,7 @@ class C_contact
 				include_once("models/thu_vien.php");
 				
 				$noi_dung_mail="<p><b>Từ: $ten_khach_hang</b></p><p><b>Email: $email</b></p><p><b>Điện thoại:$so_dt</b></p>$noi_dung";
-				$kq=thu_vien::Gui_mail_lien_he($chu_de, $noi_dung_mail);
+				$kq=thu_vien::Gui_mail_lien_he($chu_de, $noi_dung_mail, $email);
 				
 				if($kq)
 				{

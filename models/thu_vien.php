@@ -2,7 +2,7 @@
 include("plugins/phpmailer/PHPMailerAutoload.php");
 class thu_vien {
    
-    static function Gui_mail_lien_he($tieu_de, $noi_dung){
+    static function Gui_mail_lien_he($tieu_de, $noi_dung, $email){
         $mail = new PHPMailer(true);
         $mail->CharSet = "UTF-8";
         $mail->isHTML(true);
@@ -17,7 +17,7 @@ class thu_vien {
 		
 		$mail->AddAddress("toannguyenck5@gmail");
 		
-        $mail->setFrom("quantrishop@gmail.com", "Siêu thị Mini");
+        $mail->setFrom($email, "Siêu thị Mini");
         $mail->Subject = $tieu_de;
         $mail->Body = $noi_dung;
 

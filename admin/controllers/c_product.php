@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include_once("controllers/Pager.php");
 class C_product
 {
