@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2018-05-21 07:18:25
+  from "E:\wamp64\www\doan_trungtam\smarty\templates\header.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5b0272c1255468_26769838',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'fdfe6f475afb187ce70610acd3eafb4777a979a7' => 
+    array (
+      0 => 'E:\\wamp64\\www\\doan_trungtam\\smarty\\templates\\header.tpl',
+      1 => 1526887103,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5b0272c1255468_26769838 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 	<div class="agileits_header">
 		<div class="w3l_offers">
 			<a href=".">Trang chủ</a>
@@ -40,21 +64,22 @@
 			<ul>
 				<li class="dropdown profile_details_drop">
 					<a href="public/#" class="dropdown-toggle" data-toggle="dropdown">
-                    	{if !isset($smarty.session.user)}
+                    	<?php if (!isset($_SESSION['user'])) {?>
                     	<i class="fa fa-user" aria-hidden="true"></i> Tài khoản <span class="caret"></span>
-                        {else}
-                        <i class="fa fa-user" aria-hidden="true"></i> {$smarty.session.user->Name} <span class="caret"></span>
-                        {/if}
+                        <?php } else { ?>
+                        <i class="fa fa-user" aria-hidden="true"></i> <?php echo $_SESSION['user']->Name;?>
+ <span class="caret"></span>
+                        <?php }?>
                     </a>
 					<div class="mega-dropdown-menu">
 						<div class="w3ls_vegetables">
 							<ul class="dropdown-menu drp-mnu">
-                            	{if !isset($smarty.session.user)}
+                            	<?php if (!isset($_SESSION['user'])) {?>
 								<li><a href="login.php">Đăng nhập</a></li> 
 								<li><a href="login.php">Đăng ký</a></li>
-                                {else}
+                                <?php } else { ?>
                                 <li><a href="logout.php">Đăng xuất</a></li>
-                                {/if}
+                                <?php }?>
 							</ul>
 						</div>                  
 					</div>	
@@ -67,7 +92,8 @@
 		<div class="clearfix"> </div>
 	</div>
 <!-- script-for sticky-nav -->
-	<script>
+	<?php echo '<script'; ?>
+>
 	$(document).ready(function() {
 		 var navoffeset=$(".agileits_header").offset().top;
 		 $(window).scroll(function(){
@@ -80,7 +106,8 @@
 		 });
 		 
 	});
-	</script>
+	<?php echo '</script'; ?>
+>
 <!-- //script-for sticky-nav -->
 	<div class="logo_products">
 		<div class="container">
@@ -142,7 +169,8 @@
     </div>
   </div>-->
 
-<script>
+<?php echo '<script'; ?>
+>
 	function clickMe(e){
 		if($('.modal-backdrop').length > 0){
 			$('#myModal').modal("hide")
@@ -158,4 +186,6 @@
 			}
 		})
 	}
-</script>
+<?php echo '</script'; ?>
+><?php }
+}

@@ -33,17 +33,22 @@ table tr th{
 }
 .div_trang
 {
-	width:30px;
+	width: 31px;
 	padding:5px 10px 5px 10px;
 	text-align:center;
-	background:#F5D7BA;
-	margin:2px;
+	background: #84c639;
+	border-radius: 40px;
+	margin: 2px;
 }
 .div_trang a
 {
 	text-decoration:none;
+	color: #ffffff;
 }
 
+.div_trang b{
+	color:#F00;
+}
 
 html, body{
     font-size: 100%;
@@ -192,9 +197,11 @@ ul.dropdown-menu.drp-mnu li a {
     color: #999;
 }
 ul.dropdown-menu.drp-mnu li a i {
+
     padding-left: 1em;
 }
 .logo_products{
+
 	padding:4em 0 1em;
 }
 .w3ls_logo_products_left{
@@ -203,13 +210,13 @@ ul.dropdown-menu.drp-mnu li a i {
 }
 .w3ls_logo_products_left h1 a{
 	font-size: 1.5em;
-    color: #212121;
-    text-decoration: none;
-    text-transform: uppercase;
-    display: block;
-    background: url(../images/img-sp.png) no-repeat 54px 6px;
-    line-height: 1;
-    height: 97px;
+	color: #212121;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: block;
+	background: url(../images/img-sp.png) no-repeat 65px 2px;
+	line-height: 1;
+	height: 97px;
 }
 .profile_details_drop a {
     display: block;
@@ -3750,6 +3757,7 @@ input.checkbox:checked:after {
 	.w3ls_vegetables_menu {
 		left: auto;
 		float: none;
+
 		min-width: 100%;
 		text-align: center;
 	}
@@ -4848,6 +4856,7 @@ input.checkbox:checked:after {
 	}
 	.form-module input[type="text"], .form-module input[type="password"], .form-module input[type="email"] {
 		margin: 0 0 10px;
+
 		padding: 10px;
 		font-size: 13px;
 	}

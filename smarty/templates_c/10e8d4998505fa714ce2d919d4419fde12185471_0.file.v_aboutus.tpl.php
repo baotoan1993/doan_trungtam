@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2018-05-21 07:08:14
+  from "E:\wamp64\www\doan_trungtam\views\aboutus\v_aboutus.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5b02705e6def29_74299840',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '10e8d4998505fa714ce2d919d4419fde12185471' => 
+    array (
+      0 => 'E:\\wamp64\\www\\doan_trungtam\\views\\aboutus\\v_aboutus.tpl',
+      1 => 1526886487,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5b02705e6def29_74299840 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <div class="privacy about">
 			<h3>Về chúng tôi</h3>
 			<p class="animi">Được thành lập vào tháng 05 năm 2018, siêu thị Bách Hóa Mini ra đời với cam kết mang đến cho người tiêu dùng những giá trị về thực phẩm tươi ngon,sản phẩm nguồn gốc xuất đảm bảo chất lượng và không gian cưc kỳ sang trọng. Với quy mô hàng hóa đa dạng gần 3.540 mặt hàng thuộc các nhóm hàng khác nhau như khu vực hàng tươi sống, thực phẩm khô, đóng hộp, bánh kẹo, hóa mỹ phẩm, đồ dùng gia đình,… Bách Hóa Mini hứa hẹn sẽ là điểm đến lý tưởng cho quý khách hàng về nhu cầu sinh hoạt hàng ngày cũng như đảm bảo sức khỏe tốt nhất cho bản thân và gia đình.
@@ -23,4 +47,5 @@ Bách Hóa Mini không giống như các siêu thị thông thường mà bạn 
 				</div>
 				<div class="clearfix"> </div>
 			</div>
-		</div>
+		</div><?php }
+}

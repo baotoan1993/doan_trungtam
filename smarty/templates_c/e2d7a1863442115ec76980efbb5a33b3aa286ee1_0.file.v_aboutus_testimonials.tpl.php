@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2018-05-21 07:23:17
+  from "E:\wamp64\www\doan_trungtam\views\aboutus\v_aboutus_testimonials.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5b0273e59f3dd8_40439472',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'e2d7a1863442115ec76980efbb5a33b3aa286ee1' => 
+    array (
+      0 => 'E:\\wamp64\\www\\doan_trungtam\\views\\aboutus\\v_aboutus_testimonials.tpl',
+      1 => 1526887394,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5b0273e59f3dd8_40439472 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <div class="testimonials">
 		<div class="container">
 			<h3>Ý kiến khách hàng</h3>
@@ -50,10 +74,15 @@
 							</article>-->
 						</div>
 					</div>
-					<script src="public/js/jquery.wmuSlider.js"></script> 
-					<script>
+					<?php echo '<script'; ?>
+ src="public/js/jquery.wmuSlider.js"><?php echo '</script'; ?>
+> 
+					<?php echo '<script'; ?>
+>
 						$('.example1').wmuSlider();         
-					</script> 
+					<?php echo '</script'; ?>
+> 
 				</div>
 		</div>
-	</div>
+	</div><?php }
+}

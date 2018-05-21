@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2018-05-21 09:58:29
+  from "E:\wamp64\www\doan_trungtam\smarty\templates\footer.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5b029845d65ff8_38022508',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '99f0ab3fce231245f090c2452ae697cdf8dcb172' => 
+    array (
+      0 => 'E:\\wamp64\\www\\doan_trungtam\\smarty\\templates\\footer.tpl',
+      1 => 1526896708,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5b029845d65ff8_38022508 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 
 <div class="footer">
   <div class="container">
@@ -44,8 +68,11 @@
 </div>
 <!-- //footer --> 
 <!-- Bootstrap Core JavaScript --> 
-<script src="public/js/bootstrap.min.js"></script> 
-<script>
+<?php echo '<script'; ?>
+ src="public/js/bootstrap.min.js"><?php echo '</script'; ?>
+> 
+<?php echo '<script'; ?>
+>
 var check = false;
 $(document).ready(function(){
     $(".dropdown").click(            
@@ -75,12 +102,16 @@ $(document).ready(function(){
         }
     );
 });
-</script> 
+<?php echo '</script'; ?>
+> 
 
-<script src="public/js/user_cart.js"></script>
+<?php echo '<script'; ?>
+ src="public/js/user_cart.js"><?php echo '</script'; ?>
+>
 
 <!-- here stars scrolling icon --> 
-<script type="text/javascript">
+<?php echo '<script'; ?>
+ type="text/javascript">
 		$(document).ready(function() {
 			/*
 				var defaults = {
@@ -94,6 +125,8 @@ $(document).ready(function(){
 			$().UItoTop({ easingType: 'easeOutQuart' });
 								
 			});
-	</script> 
+	<?php echo '</script'; ?>
+> 
 <!-- //here ends scrolling icon -->    
-</body></html>
+</body></html><?php }
+}
