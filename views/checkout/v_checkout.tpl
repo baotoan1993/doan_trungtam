@@ -125,7 +125,7 @@
             <input type="text" value="{$smarty.session.user->Name}" name="txtHoTen" hidden/>
             <input type="text" value="{$smarty.session.user->Email}" name="txtEmail" hidden/>
             <input type="text" value="{$smarty.session.user->Address}" name="txtDiaChi" hidden/>
-            <input type="text" value="{$smarty.session.user->Phone}" name="txtSoDienThoai" hidden/>
+            <input type="text" value="{$smarty.session.user->Mobile}" name="txtSoDienThoai" hidden/>
             <label>Ghi chú:</label>
             <textarea class="form-control" name="txtGhiChu"></textarea><br />
             <button class="btn btn-danger" style="padding:10px; width:30%;">ĐẶT HÀNG</button>
