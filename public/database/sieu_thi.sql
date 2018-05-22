@@ -11,7 +11,7 @@
  Target Server Version : 50719
  File Encoding         : 65001
 
- Date: 21/05/2018 12:47:53
+ Date: 22/05/2018 22:45:05
 */
 
 SET NAMES utf8mb4;
@@ -26,17 +26,17 @@ CREATE TABLE `auth_access`  (
   `Email` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `Password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `Name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `Phone` varchar(15) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `Mobile` varchar(15) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `Address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `ActiveCode` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '0',
+  `Role` tinyint(255) NULL DEFAULT 0,
   PRIMARY KEY (`UserID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of auth_access
 -- ----------------------------
-INSERT INTO `auth_access` VALUES (1, 'toan@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'toan nguyen', '0903854331', '0903854331', '', '0');
+INSERT INTO `auth_access` VALUES (1, 'admin@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'toan dep trai', '123', 'hcm', 1);
+INSERT INTO `auth_access` VALUES (6, 'quanly@gmail.com', '5f6955d227a320c7f1f6c7da2a6d96a851a8118f', 'quản lý 1', '0123456', 'địa chỉ 1', 2);
 
 -- ----------------------------
 -- Table structure for category
@@ -54,7 +54,7 @@ CREATE TABLE `category`  (
   PRIMARY KEY (`CategoryID`) USING BTREE,
   INDEX `FK_category_CategoryID`(`CategoryParentID`) USING BTREE,
   CONSTRAINT `FK_category_CategoryID` FOREIGN KEY (`CategoryParentID`) REFERENCES `category` (`CategoryID`) ON DELETE SET NULL ON UPDATE SET NULL
-) ENGINE = InnoDB AUTO_INCREMENT = 76 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 72 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of category
@@ -144,12 +144,16 @@ CREATE TABLE `contact`  (
   `Content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
   `Status` tinyint(255) NULL DEFAULT NULL,
   PRIMARY KEY (`ContactID`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of contact
 -- ----------------------------
 INSERT INTO `contact` VALUES (1, 'bảo toàn', 'baotoannguyen193@gmail.com', '0903854331', 'Ngon đấy', 'cái này ngon đấy', 0);
+INSERT INTO `contact` VALUES (2, 'bảo toàn', 'toannguyenck5@gmail.com', '0903854331', 'Ngon đấy', NULL, 0);
+INSERT INTO `contact` VALUES (3, 'bảo toàn', 'toannguyenck5@gmail.com', '0903854331', 'Ngon đấy', NULL, 0);
+INSERT INTO `contact` VALUES (4, 'toan', 'dangnghia25197@gmail.com', '0123', 'chu de', 'asdasd', 0);
+INSERT INTO `contact` VALUES (5, 'bảo toàn', 'dangnghia25197@gmail.com', '0903854331', 'chu de', NULL, 0);
 
 -- ----------------------------
 -- Table structure for customers
@@ -164,7 +168,7 @@ CREATE TABLE `customers`  (
   `Note` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `Status` tinyint(255) NULL DEFAULT 0,
   PRIMARY KEY (`CustomerID`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of customers
@@ -174,52 +178,7 @@ INSERT INTO `customers` VALUES (2, 'nguoi mua 1', 'nguoi1@gmail.com', 'ho chi mi
 INSERT INTO `customers` VALUES (3, 'nguyễn phước bảo toàn', 'toannguyenck5@gmail.com', '120/98/62 Thích Quảng Đức, p5, Phú Nhuận, Hồ Chí Minh', '0903854331', 'xin giao càng sớm càng tốt', 0);
 INSERT INTO `customers` VALUES (4, 'Bảo toàn nguyễn phước', 'baotoannguyen193@gmail.com', 'phú nhuận', '0961107400', 'giao nhanh', 0);
 INSERT INTO `customers` VALUES (5, 'nguyễn phước bảo toàn', 'admin@gmail.com', 'ad', '0123456789', '', 0);
-
--- ----------------------------
--- Table structure for new_product
--- ----------------------------
-DROP TABLE IF EXISTS `new_product`;
-CREATE TABLE `new_product`  (
-  `ProductID` int(10) UNSIGNED NOT NULL,
-  `Priority` int(10) UNSIGNED NULL DEFAULT NULL,
-  PRIMARY KEY (`ProductID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of new_product
--- ----------------------------
-INSERT INTO `new_product` VALUES (1956, 1);
-INSERT INTO `new_product` VALUES (2016, NULL);
-INSERT INTO `new_product` VALUES (2017, NULL);
-INSERT INTO `new_product` VALUES (2018, NULL);
-INSERT INTO `new_product` VALUES (2022, NULL);
-INSERT INTO `new_product` VALUES (2047, NULL);
-INSERT INTO `new_product` VALUES (2142, NULL);
-INSERT INTO `new_product` VALUES (2143, NULL);
-INSERT INTO `new_product` VALUES (2145, NULL);
-INSERT INTO `new_product` VALUES (2146, NULL);
-INSERT INTO `new_product` VALUES (2148, NULL);
-INSERT INTO `new_product` VALUES (2149, NULL);
-INSERT INTO `new_product` VALUES (2151, NULL);
-INSERT INTO `new_product` VALUES (2152, NULL);
-INSERT INTO `new_product` VALUES (2153, NULL);
-INSERT INTO `new_product` VALUES (2156, NULL);
-INSERT INTO `new_product` VALUES (2995, 1);
-INSERT INTO `new_product` VALUES (3022, NULL);
-INSERT INTO `new_product` VALUES (3029, NULL);
-INSERT INTO `new_product` VALUES (3036, NULL);
-INSERT INTO `new_product` VALUES (3037, NULL);
-INSERT INTO `new_product` VALUES (3041, NULL);
-INSERT INTO `new_product` VALUES (3046, NULL);
-INSERT INTO `new_product` VALUES (3047, NULL);
-INSERT INTO `new_product` VALUES (3048, NULL);
-INSERT INTO `new_product` VALUES (3049, NULL);
-INSERT INTO `new_product` VALUES (3050, NULL);
-INSERT INTO `new_product` VALUES (3051, NULL);
-INSERT INTO `new_product` VALUES (3685, NULL);
-INSERT INTO `new_product` VALUES (3686, NULL);
-INSERT INTO `new_product` VALUES (4062, 1);
-INSERT INTO `new_product` VALUES (4075, 1);
+INSERT INTO `customers` VALUES (6, 'bond paker', 'bond@gmail.com', 'ho chi minh', '001562737', 'giao hang asp', 0);
 
 -- ----------------------------
 -- Table structure for orderdetail
@@ -230,7 +189,7 @@ CREATE TABLE `orderdetail`  (
   `ProductID` int(10) UNSIGNED NOT NULL,
   `Quantity` int(10) UNSIGNED NOT NULL,
   PRIMARY KEY (`OrderID`, `ProductID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of orderdetail
@@ -249,6 +208,15 @@ INSERT INTO `orderdetail` VALUES (4, 2765, 1);
 INSERT INTO `orderdetail` VALUES (4, 3061, 2);
 INSERT INTO `orderdetail` VALUES (5, 461, 3);
 INSERT INTO `orderdetail` VALUES (5, 466, 1);
+INSERT INTO `orderdetail` VALUES (6, 1842, 4);
+INSERT INTO `orderdetail` VALUES (6, 2047, 2);
+INSERT INTO `orderdetail` VALUES (7, 3821, 2);
+INSERT INTO `orderdetail` VALUES (7, 4205, 4);
+INSERT INTO `orderdetail` VALUES (8, 36, 4);
+INSERT INTO `orderdetail` VALUES (8, 1842, 2);
+INSERT INTO `orderdetail` VALUES (8, 2385, 6);
+INSERT INTO `orderdetail` VALUES (9, 2, 10);
+INSERT INTO `orderdetail` VALUES (9, 2765, 8);
 
 -- ----------------------------
 -- Table structure for orders
@@ -259,7 +227,7 @@ CREATE TABLE `orders`  (
   `CustomerID` int(10) UNSIGNED NOT NULL,
   `DateCreated` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`OrderID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of orders
@@ -269,6 +237,10 @@ INSERT INTO `orders` VALUES (2, 2, '2018-05-19 06:02:25');
 INSERT INTO `orders` VALUES (3, 3, '2018-05-20 14:38:39');
 INSERT INTO `orders` VALUES (4, 4, '2018-05-20 17:08:52');
 INSERT INTO `orders` VALUES (5, 5, '2018-05-21 00:12:02');
+INSERT INTO `orders` VALUES (6, 6, '2018-05-22 10:56:47');
+INSERT INTO `orders` VALUES (7, 6, '2018-06-10 00:00:00');
+INSERT INTO `orders` VALUES (8, 6, '2018-06-12 00:00:00');
+INSERT INTO `orders` VALUES (9, 6, '2018-07-25 00:00:00');
 
 -- ----------------------------
 -- Table structure for products
@@ -294,12 +266,12 @@ CREATE TABLE `products`  (
   INDEX `FK_products_SupplierID`(`SupplierID`) USING BTREE,
   CONSTRAINT `FK_products_CategoryID` FOREIGN KEY (`CategoryID`) REFERENCES `category` (`CategoryID`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `FK_products_SupplierID` FOREIGN KEY (`SupplierID`) REFERENCES `supplier` (`SupplierID`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 4214 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4210 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of products
 -- ----------------------------
-INSERT INTO `products` VALUES (2, 48, 1, 'Dầu gội clear nha mấy bạn', 'Clear', 'Thùng', 'Chai', 36, '<p><span style=\"font-family:verdana,geneva,sans-serif\">M&ocirc; tả test</span></p>\r\n\r\n<ol>\r\n	<li>hihi&nbsp;<img alt=\"cheeky\" src=\"http://localhost:81/doan_trungtam/public/ckeditor/plugins/smiley/images/tongue_smile.png\" style=\"height:23px; width:23px\" title=\"cheeky\" /></li>\r\n	<li><span style=\"color:#FF0000\"><span style=\"background-color:#FFFF00\">trời ơi&nbsp;</span><img alt=\"angry\" src=\"http://localhost:81/doan_trungtam/public/ckeditor/plugins/smiley/images/angry_smile.png\" style=\"height:23px; width:23px\" title=\"angry\" /></span></li>\r\n</ol>\r\n', '2.png', 45000, 20, '2018-05-19 19:15:36', NULL);
+INSERT INTO `products` VALUES (2, 48, 1, 'đổi lần nữa', 'Clear', 'Thùng', 'Chai', 36, '<p><span style=\"font-family:verdana,geneva,sans-serif\">M&ocirc; tả test</span></p>\r\n\r\n<ol>\r\n	<li>hihi&nbsp;<img alt=\"cheeky\" src=\"http://localhost:81/doan_trungtam/public/ckeditor/plugins/smiley/images/tongue_smile.png\" style=\"height:23px; width:23px\" title=\"cheeky\" /></li>\r\n	<li><span style=\"color:#FF0000\"><span style=\"background-color:#FFFF00\">trời ơi&nbsp;</span><img alt=\"angry\" src=\"http://localhost:81/doan_trungtam/public/ckeditor/plugins/smiley/images/angry_smile.png\" style=\"height:23px; width:23px\" title=\"angry\" /></span></li>\r\n</ol>\r\n', '2.png', 45000, 20, '2018-05-21 15:28:17', NULL);
 INSERT INTO `products` VALUES (3, 48, 1, 'Clear Dầu gội dưỡng mềm mượt 380g (chai)', 'Clear', 'Thùng', 'Chai', 12, '', 'MP-4.jpg', 51900, 1, '2009-11-26 15:55:35', NULL);
 INSERT INTO `products` VALUES (4, 48, 1, 'Clear Dầu gội dưỡng mềm mượt 650g (chai)', 'Clear', 'Thùng', 'Chai', 12, '', 'MP-5.jpg', 76500, 1, '2009-11-26 15:55:35', NULL);
 INSERT INTO `products` VALUES (5, 48, 1, 'Clear Dầu gội sạch nhờn da đầu 180g (chai)', 'Clear', 'Thùng', 'Chai', 36, '', 'MP-6.jpg', 28800, 1, '2009-11-26 15:55:35', NULL);
@@ -3839,80 +3811,6 @@ INSERT INTO `products` VALUES (4206, 62, 16, 'Khăn ướt Nuolive Baby Wipes 80
 INSERT INTO `products` VALUES (4207, 62, 16, 'Khăn ướt Nuolive Baby Wipes 30 tờ', 'Khăn ướt', 'Thùng', 'Gói', 48, '', 'HMP-440.jpg', 14500, 12, '2009-12-04 16:51:50', NULL);
 INSERT INTO `products` VALUES (4208, 62, 16, 'Khăn ướt Nuolive Baby Wipes 10 tờ', 'Khăn ướt', 'Thùng', 'Gói', 144, '', 'HMP-441.jpg', 5500, 12, '2009-12-04 16:51:50', NULL);
 INSERT INTO `products` VALUES (4209, 27, 1, 'táo mỹ đó', 'Apple', NULL, 'kilogram', 1, NULL, '11.png', 30000, 2, '2018-05-02 22:20:57', NULL);
-
--- ----------------------------
--- Table structure for promotion_gift
--- ----------------------------
-DROP TABLE IF EXISTS `promotion_gift`;
-CREATE TABLE `promotion_gift`  (
-  `ProductID` int(10) UNSIGNED NOT NULL,
-  `Description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `Priority` int(10) UNSIGNED NULL DEFAULT NULL,
-  PRIMARY KEY (`ProductID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Table structure for promotion_price
--- ----------------------------
-DROP TABLE IF EXISTS `promotion_price`;
-CREATE TABLE `promotion_price`  (
-  `ProductID` int(10) UNSIGNED NOT NULL,
-  `Description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `Discount` int(10) UNSIGNED NULL DEFAULT NULL,
-  `Priority` int(10) UNSIGNED NULL DEFAULT NULL,
-  PRIMARY KEY (`ProductID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of promotion_price
--- ----------------------------
-INSERT INTO `promotion_price` VALUES (1091, '', 0, 1);
-INSERT INTO `promotion_price` VALUES (1093, '', 0, 8);
-INSERT INTO `promotion_price` VALUES (1094, '', 0, 3);
-INSERT INTO `promotion_price` VALUES (1101, '', 0, 6);
-INSERT INTO `promotion_price` VALUES (1108, '', 0, 0);
-INSERT INTO `promotion_price` VALUES (1110, '', 0, 0);
-INSERT INTO `promotion_price` VALUES (2144, '', 0, 5);
-INSERT INTO `promotion_price` VALUES (2147, '', 0, 2);
-INSERT INTO `promotion_price` VALUES (2150, '', 0, 7);
-INSERT INTO `promotion_price` VALUES (2154, '', 0, 4);
-
--- ----------------------------
--- Table structure for shopcart
--- ----------------------------
-DROP TABLE IF EXISTS `shopcart`;
-CREATE TABLE `shopcart`  (
-  `CartID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `ProductID` int(10) UNSIGNED NOT NULL,
-  `UserID` int(10) UNSIGNED NOT NULL,
-  `Quantity` int(10) UNSIGNED NOT NULL,
-  `Date` datetime(0) NULL DEFAULT NULL,
-  PRIMARY KEY (`CartID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of shopcart
--- ----------------------------
-INSERT INTO `shopcart` VALUES (5, 179, 22, 2, '2018-04-27 23:49:47');
-INSERT INTO `shopcart` VALUES (11, 1877, 24, 1, '2018-04-28 15:36:37');
-INSERT INTO `shopcart` VALUES (13, 3376, 24, 1, '2018-04-28 15:36:55');
-INSERT INTO `shopcart` VALUES (15, 1463, 0, 3, '2018-04-30 15:46:57');
-
--- ----------------------------
--- Table structure for status
--- ----------------------------
-DROP TABLE IF EXISTS `status`;
-CREATE TABLE `status`  (
-  `statusid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `status` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  PRIMARY KEY (`statusid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of status
--- ----------------------------
-INSERT INTO `status` VALUES (1, 'Mới');
-INSERT INTO `status` VALUES (2, 'Đã xem');
 
 -- ----------------------------
 -- Table structure for supplier

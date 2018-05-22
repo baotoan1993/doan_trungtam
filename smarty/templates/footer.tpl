@@ -16,6 +16,24 @@
         <li><a href="public/faqs.html">Đổi trả</a></li>
       </ul>
     </div>
+    <div class="col-md-5 w3_footer_grid">
+    <!--facebook like share-->
+      <div class="fb-page" data-href="https://www.facebook.com/B%C3%A1ch-H%C3%B3a-Mini-189112991738434/?modal=admin_todo_tour" 
+                             data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+                             data-show-facepile="true" data-show-posts="false">
+    <div class="fb-xfbml-parse-ignore">
+        <blockquote cite="https://www.facebook.com/B%C3%A1ch-H%C3%B3a-Mini-189112991738434/?modal=admin_todo_tour">
+            <a href="https://www.facebook.com/B%C3%A1ch-H%C3%B3a-Mini-189112991738434/?modal=admin_todo_tour">Facebook</a>
+        </blockquote>
+    </div>
+</div>
+
+      <div class="fb-like" data-href="https://www.facebook.com/B%C3%A1ch-H%C3%B3a-Mini-189112991738434/?modal=admin_todo_tour" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true">
+        
+        </div>
+    <!--//facebook like share-->
+	</div>
+    
     <div class="clearfix"> </div>
     <div class="agile_footer_grids">
       <div class="col-md-3 w3_footer_grid agile_footer_grids_w3_footer">
@@ -96,4 +114,17 @@ $(document).ready(function(){
 			});
 	</script> 
 <!-- //here ends scrolling icon -->    
+
+<!-- facebook --->
+<div id="fb-root"></div>
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.4";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+<!-- // facebook --->
 </body></html>
