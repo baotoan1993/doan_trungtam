@@ -15,11 +15,11 @@ class M_user extends Database
 		return $this->loadRow(array($mail, $pass));
 	}
 	
-	public function Dang_ky_tai_khoan($mail, $pass, $name, $phone, $mobile, $address)
+	public function Dang_ky_tai_khoan($mail, $pass, $name, $mobile, $address)
 	{
-		$sql = "INSERT INTO auth_access(Email, Password, Name, Phone, Mobile, Address)
-				VALUES (?, ?, ?, ?, ?, ?)";
-		$params = array($mail, $pass, $name, $phone, $mobile, $address);
+		$sql = "INSERT INTO auth_access(Email, Password, Name, Mobile, Address)
+				VALUES (?, ?, ?, ?, ?)";
+		$params = array($mail, $pass, $name, $mobile, $address);
 		$this->setQuery($sql);
 		return $this->execute($params);
 	}

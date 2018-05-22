@@ -18,7 +18,7 @@ body {
 
     background: #eeeeee;
 
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
 
     padding: 0px !important;
 
@@ -253,7 +253,7 @@ table tr th { color: #688a7e;}
 
     font-weight: 300;
 
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
 
 }
 
@@ -271,7 +271,7 @@ table tr th { color: #688a7e;}
 
     font-weight: 300;
 
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;;
 
 }
 
@@ -363,7 +363,7 @@ table tr th { color: #688a7e;}
 
     font-weight: 300;
 
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;;
 
     box-shadow: 0 4px #e56b60;
 
@@ -3957,7 +3957,7 @@ div[data-role="editor-toolbar"] {
 
     background: #00a0df;
 
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;;
 
     font-size: 11px;
 
@@ -6453,7 +6453,7 @@ ul.inbox-pagination li {
 
     font-weight: 300;
 
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;;
 
 }
 
@@ -6463,7 +6463,7 @@ ul.inbox-pagination li {
 
     font-weight: 400;
 
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;;
 
 }
 
@@ -8673,7 +8673,7 @@ table.sliders tr td {
 
     color: #34495e;
 
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
 
     font-size: 14px;
 
@@ -8965,7 +8965,7 @@ table.sliders tr td {
 
 .daterangepicker .calendar th, .daterangepicker .calendar td {
 
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;;
 
     font-weight: 300;
 

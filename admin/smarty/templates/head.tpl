@@ -19,6 +19,7 @@
   <!-- font icon -->
   <link href="public/css/elegant-icons-style.css" rel="stylesheet" />
   <link href="public/css/font-awesome.min.css" rel="stylesheet" />
+  
   <!-- full calendar css-->
   <link href="public/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
   <link href="public/assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
@@ -30,12 +31,16 @@
   <!-- Custom styles -->
   <link rel="stylesheet" href="public/css/fullcalendar.css">
   <link href="public/css/widgets.css" rel="stylesheet">
+  <link href='public/css/font-roboto.css' rel='stylesheet'>
   <link href="public/css/style.css" rel="stylesheet">
   <link href="public/css/style-responsive.css" rel="stylesheet" />
   <link href="public/css/xcharts.min.css" rel=" stylesheet">
   <link href="public/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
   
+  
+  
   <link rel="stylesheet" type="text/css" href="public/css/animate.css">
+  
   
   <script src="public/js/jquery.js"></script>
   <script src="public/js/jquery-ui-1.10.4.min.js"></script>
@@ -49,7 +54,7 @@
   
   <!--<script src="public/js/Chart.js"></script>-->
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+  <script src="public/js/Chart.js"></script>
  
   <!-- =======================================================
     Theme Name: NiceAdmin
@@ -59,4 +64,4 @@
   ======================================================= -->
 </head>
 
-<body style="font-family:Tahoma, Geneva, sans-serif">
+<body>

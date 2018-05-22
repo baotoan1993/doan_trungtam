@@ -85,7 +85,6 @@ class C_login
 			$pass = $_POST['r_Password'];
 			$name = $_POST['r_Username'];
 			$mobile = $_POST['r_Mobile'];
-			$phone = $_POST['r_Phone'];
 			$address = $_POST['r_Address'];
 			
 			include("models/m_user.php");
@@ -94,7 +93,7 @@ class C_login
 			if(!$user)
 			{
 				$pass = sha1($pass);
-				$m_user->Dang_ky_tai_khoan($mail, $pass, $name, $phone, $mobile, $address);
+				$m_user->Dang_ky_tai_khoan($mail, $pass, $name, $mobile, $address);
 			}
 			else
 			{

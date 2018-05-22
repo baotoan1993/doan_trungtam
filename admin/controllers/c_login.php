@@ -12,7 +12,7 @@ class C_login
 	public function Kiem_tra_dang_nhap()
 	{
 		$username = $_POST['username'];
-		$password = $_POST['password'];
+		$password = sha1($_POST['password']);
 		
 		include("models/m_login.php");
 		$m_login = new M_login();

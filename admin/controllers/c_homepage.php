@@ -10,6 +10,7 @@ class C_homepage
 		$tong_don_dat_hang = $m_summary->Lay_tong_so_luong_don_dat_hang();
 		$tong_so_luong_san_pham_dat_hang = $m_summary->Lay_tong_so_luong_san_pham_da_dat_hang();
 		$thong_ke_theo_ngay = $m_summary->Thong_ke_ban_hang_theo_ngay();
+		$thong_ke_theo_thang = $m_summary->Thong_ke_ban_hang_theo_thang();
 		
 		//view
 		include("controllers/smarty_admin.php");
@@ -21,6 +22,7 @@ class C_homepage
 		$smarty->assign("tong_don_dat_hang", $tong_don_dat_hang);
 		$smarty->assign("tong_so_luong_san_pham_dat_hang", $tong_so_luong_san_pham_dat_hang);
 		$smarty->assign("thong_ke_theo_ngay", $thong_ke_theo_ngay);
+		$smarty->assign("thong_ke_theo_thang", $thong_ke_theo_thang);
 		
 		$view = "views/homepage/v_summary.tpl";
 		$smarty->assign("view", $view);

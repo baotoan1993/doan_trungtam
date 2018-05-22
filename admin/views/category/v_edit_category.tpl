@@ -30,7 +30,7 @@
             <label for="usr">Cập nhật chi tiết:</label>
             <input type="text" class="form-control" placeholder="thông tin muốn cập nhật" name="CategoryInfo">
         </div>
-        <table width="500px" align="center">
+        <table width="500px" align="center" class="table">
         	<tr align="center">
             	<td><button class="btn btn-success" onClick="Them()">Thêm</button></td>
                 <td><button class="btn btn-primary" onClick="CapNhat()">Cập nhật</button></td>

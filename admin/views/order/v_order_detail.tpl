@@ -8,8 +8,8 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">
-              <h3 style="display:inline">Khach hang: </h3>
-              <h1 style="display:inline">{$ten_khach_hang}</h1>
+              <h3 style="display:inline">Khách hàng: </h3>
+              <h1 style="display:inline; font-family:'Roboto', sans-serif">{$ten_khach_hang}</h1>
             </div>
           </div>
           <br >

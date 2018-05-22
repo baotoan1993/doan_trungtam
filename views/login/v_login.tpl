@@ -38,8 +38,7 @@
               <input type="text" name="r_Username" placeholder="Họ tên" required>
               <input type="email" name="r_Email" placeholder="Email" required>
               <input type="password" name="r_Password" placeholder="Mật khẩu" required>
-              <input type="text" name="r_Phone" placeholder="Điện thoại">
-              <input type="text" name="r_Mobile" placeholder="Di động" required>
+              <input type="text" name="r_Mobile" placeholder="Điện thoại" required>
               <input type="text" name="r_Address" placeholder="Địa chỉ">
               <input type="submit" value="Đăng ký" id="btnRegister">
             </form>
