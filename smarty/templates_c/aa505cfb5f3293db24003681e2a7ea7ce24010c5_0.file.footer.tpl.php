@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-05-22 16:37:00
+/* Smarty version 3.1.30, created on 2018-05-24 08:18:11
   from "C:\wamp64\www\doan_trungtam\smarty\templates\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5b04472c513471_94202757',
+  'unifunc' => 'content_5b0675434129b1_19433610',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aa505cfb5f3293db24003681e2a7ea7ce24010c5' => 
     array (
       0 => 'C:\\wamp64\\www\\doan_trungtam\\smarty\\templates\\footer.tpl',
-      1 => 1527006978,
+      1 => 1527149889,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b04472c513471_94202757 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b0675434129b1_19433610 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="footer">
@@ -36,8 +36,7 @@ function content_5b04472c513471_94202757 (Smarty_Internal_Template $_smarty_tpl)
     <div class="col-md-3 w3_footer_grid">
       <h3>Chính sách</h3>
       <ul class="w3_footer_grid_list">
-        <li><a href="public/faqs.html">Điều khoản</a></li>
-        <li><a href="public/faqs.html">Đổi trả</a></li>
+        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myTerms">Điều khoản đổi trả</a></li>
       </ul>
     </div>
     <div class="col-md-5 w3_footer_grid">
@@ -84,6 +83,23 @@ function content_5b04472c513471_94202757 (Smarty_Internal_Template $_smarty_tpl)
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="myTerms" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        
+        <div class="modal-body">
+          <!--<iframe src="//www.slideshare.net/slideshow/embed_code/key/7JovLcPYlDIwM9" width="668" height="714" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/toannguyen459/chnh-sch-i-tr" title="Chính sách đổi trả" target="_blank">Chính sách đổi trả</a> </strong> from <strong><a href="https://www.slideshare.net/toannguyen459" target="_blank">toan nguyen</a></strong> </div>-->
+          <embed src="public/doi_tra.pdf" type="application/pdf" width="100%" height="500">
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+
 <!-- //footer --> 
 <!-- Bootstrap Core JavaScript --> 
 <?php echo '<script'; ?>
@@ -91,6 +107,7 @@ function content_5b04472c513471_94202757 (Smarty_Internal_Template $_smarty_tpl)
 > 
 <?php echo '<script'; ?>
 >
+
 var check = false;
 $(document).ready(function(){
     $(".dropdown").click(            
@@ -161,5 +178,7 @@ $(document).ready(function(){
     <?php echo '</script'; ?>
 >
 <!-- // facebook --->
-</body></html><?php }
+</body></html>
+
+<?php }
 }

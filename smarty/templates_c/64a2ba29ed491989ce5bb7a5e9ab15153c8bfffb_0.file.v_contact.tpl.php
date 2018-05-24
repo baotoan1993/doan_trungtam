@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2018-05-23 11:14:24
+  from "C:\wamp64\www\doan_trungtam\views\contact\v_contact.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5b054d10f257a0_87498700',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '64a2ba29ed491989ce5bb7a5e9ab15153c8bfffb' => 
+    array (
+      0 => 'C:\\wamp64\\www\\doan_trungtam\\views\\contact\\v_contact.tpl',
+      1 => 1527074062,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5b054d10f257a0_87498700 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <div class="mail">
 			<h3>Liên hệ với chúng tôi</h3>
 			<div class="agileinfo_mail_grids">
@@ -35,4 +59,5 @@
 				</div>
 				<div class="clearfix"> </div>
 			</div>
-		</div>
+		</div><?php }
+}

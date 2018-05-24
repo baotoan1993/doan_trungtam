@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-05-22 16:37:00
+/* Smarty version 3.1.30, created on 2018-05-23 11:06:55
   from "C:\wamp64\www\doan_trungtam\smarty\templates\head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5b04472c404799_93348132',
+  'unifunc' => 'content_5b054b4feba070_81000856',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd9e1ea7cf4c2f28c7771622fbc307cf391542faa' => 
     array (
       0 => 'C:\\wamp64\\www\\doan_trungtam\\smarty\\templates\\head.tpl',
-      1 => 1526847466,
+      1 => 1527073613,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b04472c404799_93348132 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b054b4feba070_81000856 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!--
 author: W3layouts
@@ -57,6 +57,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  src="public/js/jquery-1.11.1.min.js"><?php echo '</script'; ?>
 >
 
+<?php echo '<script'; ?>
+ type="text/javascript" src="public/ckeditor/ckeditor.js"><?php echo '</script'; ?>
+>
 
 
 <?php echo '<script'; ?>

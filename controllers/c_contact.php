@@ -17,12 +17,12 @@ class C_contact
 			$chu_de=NULL;
 			$noi_dung=NULL;
 			
-			if($_POST["Name"] != "Tên*") $ten_khach_hang=$_POST["Name"];
+			$ten_khach_hang=$_POST["Name"];
 			
-			if($_POST["Telephone"] != "Điện thoại*") $so_dt=$_POST["Telephone"];
-			if($_POST["Email"] != "Email*")	$email=$_POST["Email"];
-			if($_POST["Subject"] != "Chủ đề*") $chu_de=$_POST["Subject"];
-			if($_POST["Message"] != "Nội dung...") $noi_dung=$_POST["Message"];
+			$so_dt=$_POST["Telephone"];
+			$email=$_POST["Email"];
+			$chu_de=$_POST["Subject"];
+			$noi_dung=$_POST["Message"];
 			$trang_thai=0;
 			//echo "$ten_khach_hang $email $so_dt $chu_de $noi_dung $trang_thai";
 			
@@ -43,11 +43,11 @@ class C_contact
 				
 				if($kq)
 				{
-					echo "<script>alert('Đã gửi đến cho người xử lý, vui lòng đợi phản hồi ở mail của bạn')</script>"	;
+					echo "<script>alert('Chúng tôi đã ghi nhận nội dung liên hệ của bạn! Cảm ơn bạn hỗ trợ BÁCH HOÁ MINI')</script>";
 				}
 				else
 				{
-					echo "<script>alert('Lỗi gửi liên hệ')</script>"	;
+					echo "<script>alert('Lỗi gửi liên hệ')</script>";
 				}	
 			}
 			

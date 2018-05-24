@@ -12,8 +12,7 @@
     <div class="col-md-3 w3_footer_grid">
       <h3>Chính sách</h3>
       <ul class="w3_footer_grid_list">
-        <li><a href="public/faqs.html">Điều khoản</a></li>
-        <li><a href="public/faqs.html">Đổi trả</a></li>
+        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myTerms">Điều khoản đổi trả</a></li>
       </ul>
     </div>
     <div class="col-md-5 w3_footer_grid">
@@ -60,10 +59,28 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="myTerms" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        
+        <div class="modal-body">
+          <!--<iframe src="//www.slideshare.net/slideshow/embed_code/key/7JovLcPYlDIwM9" width="668" height="714" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/toannguyen459/chnh-sch-i-tr" title="Chính sách đổi trả" target="_blank">Chính sách đổi trả</a> </strong> from <strong><a href="https://www.slideshare.net/toannguyen459" target="_blank">toan nguyen</a></strong> </div>-->
+          <embed src="public/doi_tra.pdf" type="application/pdf" width="100%" height="500">
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+
 <!-- //footer --> 
 <!-- Bootstrap Core JavaScript --> 
 <script src="public/js/bootstrap.min.js"></script> 
 <script>
+
 var check = false;
 $(document).ready(function(){
     $(".dropdown").click(            
@@ -109,7 +126,7 @@ $(document).ready(function(){
 				};
 			*/
 								
-			$().UItoTop({ easingType: 'easeOutQuart' });
+			$().UItoTop({literal}{ easingType: 'easeOutQuart' }{/literal});
 								
 			});
 	</script> 
@@ -128,3 +145,4 @@ $(document).ready(function(){
     </script>
 <!-- // facebook --->
 </body></html>
+

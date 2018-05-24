@@ -12,8 +12,8 @@ class thu_vien {
         $mail->Host = "smtp.gmail.com"; // sets GMAIL as the SMTP server
         $mail->Port = 465; // set the SMTP port for the GMAIL server
         
-		$mail->Username = "toannguyenck5@gmail.com"; // GMAIL username
-        $mail->Password = "baonhu1993"; // GMAIL password
+		$mail->Username = "hotrobachhoa@gmail.com"; // GMAIL username
+        $mail->Password = "sieuthi1234"; // GMAIL password
 		
 		$mail->AddAddress("toannguyenck5@gmail");
 		
